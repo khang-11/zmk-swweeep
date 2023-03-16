@@ -4,6 +4,14 @@
 #define COMBO_TERM_SLOW 40
 #define COMBO_GLOBAL_QUICKTAP 100
 
+&caps_word {
+    continue-list = <
+        UNDER MINUS BSPC
+        LCTRL LALT LGUI LSHFT
+        RCTRL RALT RGUI RSHFT
+    >;
+};
+
 / {
   combos {
     compatible = "zmk,combos";
@@ -13,8 +21,7 @@
       global-quick-tap-ms = <COMBO_GLOBAL_QUICKTAP>;
 
       key-positions = <LM1 RM1>;
-      layers = <BASE>;
-      bindings = <&caps_word_capslock >;
+      bindings = <&caps_word>;
     };
     
   };
